@@ -1,0 +1,17 @@
+package com.example.brewpedia.data.local
+
+import androidx.paging.PagingSource
+import androidx.room.Query
+import androidx.room.Upsert
+
+interface BeerDao {
+    @Upsert
+    suspend fun upsertAll(beers: List<BeerEntity>)
+
+    @Query("SELECT * FROM beerentity")
+    fun pagingSource(): PagingSource<Int, BeerEntity>
+
+    @Query("DELETE FROM beerentity")
+    suspend fun clearALl()
+
+}
