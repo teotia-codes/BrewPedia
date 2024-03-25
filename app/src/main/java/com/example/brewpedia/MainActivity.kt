@@ -15,7 +15,9 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.brewpedia.presentation.BeerScreen
 import com.example.brewpedia.presentation.BeerViewModel
 import com.example.brewpedia.ui.theme.BrewPediaTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

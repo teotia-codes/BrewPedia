@@ -9,6 +9,7 @@ import androidx.room.withTransaction
 import com.example.brewpedia.data.local.BeerDatabase
 import com.example.brewpedia.data.local.BeerEntity
 import com.example.brewpedia.data.mappers.toBeerEntity
+import kotlinx.coroutines.delay
 import java.io.IOException
 
 @OptIn(ExperimentalPagingApi::class)
@@ -37,6 +38,7 @@ class BeerRemoteMediator(
                     }
                 }
             }
+            delay(2000L)
             val beers = beerApi.getBeers(
                 page = loadKey,
                 pageCount = state.config.pageSize
