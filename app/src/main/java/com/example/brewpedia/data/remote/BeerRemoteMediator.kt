@@ -11,7 +11,7 @@ import com.example.brewpedia.data.local.BeerEntity
 import com.example.brewpedia.data.mappers.toBeerEntity
 import kotlinx.coroutines.delay
 import java.io.IOException
-
+//Same as repository
 @OptIn(ExperimentalPagingApi::class)
 class BeerRemoteMediator(
     private val beerDb: BeerDatabase,
